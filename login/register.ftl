@@ -39,6 +39,25 @@
                     </#if>
                 </div>
             </div>
+			
+			<div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
+			    <div class="${properties.kcLabelWrapperClass!}">
+			        <label for="role" class="${properties.kcLabelClass!}">${msg("Main role")}</label>
+			    </div>
+			    <div class="${properties.kcInputWrapperClass!}">
+			        <select
+			            id="user.attributes.role"
+			            class="${properties.kcInputClass!}"
+			            name="user.attributes.role"
+			            value="${(register.formData['user.attributes.role']!'')}">
+			                <option value="DEV" selected>Developer (Simplicite designer / developer)</option>
+			                <option value="DEC">Decider (CTO / CIO /DSI / etc)</option>
+			                <option value="MAG">Manager (Project manager / Product manager / etc)</option>
+			                <option value="EU">End user</option>
+			                <option value="OTH">Other</option>
+			        </select>
+			    </div>
+			</div>
 
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">

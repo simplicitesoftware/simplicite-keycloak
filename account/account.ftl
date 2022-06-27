@@ -54,17 +54,23 @@
             <div class="col-sm-10 col-md-10">
                 <input type="text" class="form-control" id="lastName" name="lastName" value="${(account.lastName!'')}"/>
             </div>
-        </div>
+        </div> 
 <div class="form-group">
    <div class="col-sm-2 col-md-2">
-       <label for="user.attributes.mobile" class="control-label">Mobile number</label>
+       <label for="user.attributes.role" class="control-label">Main role</label>
    </div>
-
-   <div class="col-sm-10 col-md-10">
-       <input type="text" class="form-control" id="user.attributes.mobile" name="user.attributes.mobile" value="${(account.attributes.mobile!'')}"/>
-   </div>
+<select
+            id="user.attributes.role"
+            class="${properties.kcInputClass!}"
+            name="user.attributes.role"
+            value="${(register.formData['user.attributes.role']!'')}">
+                <option value="DEV" selected>Developer (Simplicite designer / developer)</option>
+                <option value="DEC">Decider (CTO / CIO /DSI / etc</option>
+                <option value="MAG">Manager (Project manager / Product manager / etc)</option>
+                <option value="EU">End user</option>
+                <option value="OTH">Other</option>
+        </select>
 </div>
-
 <div class="form-group">
    <div class="col-sm-2 col-md-2">
        <label for="user.attributes.company" class="control-label">Company</label>
